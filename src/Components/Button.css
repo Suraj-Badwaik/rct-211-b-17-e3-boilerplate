@@ -1,0 +1,28 @@
+.white{
+    background-color: white;
+}
+
+.red{
+    background-color: red;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.green{
+    background-color: green;
+}
+
+.solid{
+    background-color: red ;
+}
+
+.ghost{
+    background-color: white;
+    border: 1px solid ;
+}
+
+.default{
+    background-color: white;
+}

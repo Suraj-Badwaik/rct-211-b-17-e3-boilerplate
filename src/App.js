@@ -1,9 +1,12 @@
+import { useState } from "react";
 import "./App.css";
 import { Button } from "./Components/Button";
 import { Pagination } from "./Components/Pagination";
 import { useCounter } from "./hooks/useCounter";
 
 function App() {
+  const [currentPage, setCurrentPage] = useState(1);
+ 
   /* 
   1. Implement only the hook functionality inside hooks/useCounter.js
   2. Create the custom components, inside the respective files of Button.jsx and Pagination.jsx
@@ -14,6 +17,15 @@ function App() {
     minValue: 5,
     maxValue: 15,
   });
+
+
+  const selected = () => {
+
+  }
+
+  const onPageChange = () => {
+
+  }
   return (
     <div className="App">
       {/* DO NOT CHANGE the 5 lines below   */}
@@ -26,9 +38,9 @@ function App() {
       <br />
       {/* You can pass the required props as mentioned in the questions to
       check if the components are working properly */}
-      <Button />
+      <Button colorScheme={'red'} variant={'ghost'} size={'md'}/>
       <br />
-      <Pagination />
+      <Pagination total={10} selected={selected} onPageChange={onPageChange}/>
     </div>
   );
 }
